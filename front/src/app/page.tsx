@@ -7,6 +7,7 @@ export default function Home() {
         <title>Rick and Morty App</title>
         <meta name="description" content="App de personajes de Rick and Morty" />
         <link rel="icon" href="/favicon.ico" />
+        
       </Head>
 
       {/* Fondo de estrellas */}
