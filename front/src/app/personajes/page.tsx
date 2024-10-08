@@ -13,10 +13,12 @@ export default function PersonajesPage() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [searchTerm, setSearchTerm] = useState("");
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  
   useEffect(() => {
     const fetchCharacters = async () => {
       const res = await fetch(
-        `http://127.0.0.1:3000/characters?page=${page}&limit=10`
+        `http://pruebatecnica-production-gero.up.railway.app:8080/characters?page=${page}&limit=10`
       );
       const data = await res.json();
       setCharacters(data.characters);
