@@ -16,16 +16,14 @@ export default function PersonajesPage() {
   
   useEffect(() => {
     const fetchCharacters = async () => {
-      const res = await fetch(
-        `${apiUrl}/characters?page=${page}&limit=10`
-      );
+      const res = await fetch(`http://pruebatecnica11-7-24-production.up.railway.app/characters?page=${page}&limit=10`);
       const data = await res.json();
       setCharacters(data.characters);
       setAllCharacters(data.characters); 
       setTotalPages(data.totalPages);
     };
     fetchCharacters();
-  }, [page , apiUrl]);
+  }, [page]);
   
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
