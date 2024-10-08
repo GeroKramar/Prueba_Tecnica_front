@@ -29,10 +29,8 @@ export default function PersonajesPage() {
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
     if (e.target.value === "") {
-      // Si la búsqueda está vacía, mostramos todos los personajes
       setCharacters(allCharacters);
     } else {
-      // Filtrar personajes localmente
       const filteredCharacters = allCharacters.filter((character) =>
         character.name.toLowerCase().includes(e.target.value.toLowerCase())
       );

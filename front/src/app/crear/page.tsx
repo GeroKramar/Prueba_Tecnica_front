@@ -48,7 +48,7 @@ export default function CrearPersonajePage() {
     };
   
     try {
-      const res = await fetch(`${apiUrl}}/characters/create`, {
+      const res = await fetch(`${apiUrl}/characters/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
