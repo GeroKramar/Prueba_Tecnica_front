@@ -114,10 +114,11 @@ export default function PersonajesPage() {
                 key={character._id}
                 className="bg-gray-800 p-4 rounded-lg shadow-lg text-center"
               >
-                <Image
+                <img
                   src={character.image}
                   alt={character.name}
                   className="w-32 h-32 mx-auto rounded-full mb-4"
+                
                 />
                 <h2 className="text-2xl font-bold">{character.name}</h2>
                 <p className="text-gray-400">{character.status}</p>
