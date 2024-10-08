@@ -16,7 +16,7 @@ import { CharacterFull } from "@/app/interfaces";
       };
   
       fetchCharacter();
-    }, [params.id]);
+    }, [params.id, apiUrl]);
   
     if (!character) {
       return <div className="text-white">Cargando...</div>;

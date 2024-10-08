@@ -24,7 +24,7 @@ export default function PersonajesPage() {
       setTotalPages(data.totalPages);
     };
     fetchCharacters();
-  }, [page]);
+  }, [page , apiUrl]);
   
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
