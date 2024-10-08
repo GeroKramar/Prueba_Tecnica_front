@@ -1,0 +1,49 @@
+.portal {
+    background: url('https://i.pinimg.com/originals/64/5c/8d/645c8d877f6e2aad7fa6545140c72a52.gif'); /* Asegúrate de agregar la ruta correcta de la imagen */
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    animation: spin 10s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegurarse de que las estrellas queden detrás del portal */
+    box-shadow: 
+      1000px 800px #fff, 1200px 500px #fff, 1400px 300px #fff, 1600px 600px #fff, 800px 900px #fff, 
+      150px 1200px #fff, 500px 1600px #fff, 1200px 1700px #fff, 1800px 200px #fff, 900px 1500px #fff, 
+      1800px 1200px #fff, 2000px 600px #fff, 2400px 400px #fff, 300px 2200px #fff, 2000px 2500px #fff;
+    animation: animStar 100s linear infinite;
+  }
+  
+  @keyframes animStar {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-3000px);
+    }
+  }
+  

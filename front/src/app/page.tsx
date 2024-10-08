@@ -10,12 +10,11 @@ export default function Home() {
         
       </Head>
 
-      {/* Fondo de estrellas */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="stars"></div>
       </div>
 
-      {/* Contenido principal */}
+      
       <main className="relative z-10 text-center p-6 max-w-2xl w-full">
         <h1 className="text-5xl font-extrabold mb-6 text-green-300">
           ¡Explorá el Multiverso de Rick y Morty!
