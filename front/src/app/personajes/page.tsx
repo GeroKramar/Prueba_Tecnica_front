@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Character } from "../interfaces";
 import Link from "next/link";
 import Swal from "sweetalert2";
+import Image from 'next/image';
 
 export default function PersonajesPage() {
   const [characters, setCharacters] = useState<Character[]>([]);
@@ -115,7 +116,7 @@ export default function PersonajesPage() {
                 key={character._id}
                 className="bg-gray-800 p-4 rounded-lg shadow-lg text-center"
               >
-                <img
+                <Image
                   src={character.image}
                   alt={character.name}
                   className="w-32 h-32 mx-auto rounded-full mb-4"

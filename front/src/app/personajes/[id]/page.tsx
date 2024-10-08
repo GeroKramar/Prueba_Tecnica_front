@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import './pjstyle.css';
 import Link from "next/link";
 import { CharacterFull } from "@/app/interfaces";
-
+import Image from 'next/image';
   
   export default function CharacterDetail({ params }: { params: { id: string } }) {
     const [character, setCharacter] = useState<CharacterFull | null>(null);
@@ -29,7 +29,7 @@ import { CharacterFull } from "@/app/interfaces";
   
         <div className="z-10 text-center p-8 rounded-lg bg-gray-800 shadow-lg transition-transform transform hover:scale-105">
           <h1 className="text-5xl font-bold mb-4">{character.name}</h1>
-          <img
+          <Image
             src={character.image}
             alt={character.name}
             className="w-48 h-48 mx-auto rounded-full mb-4 border-4 border-green-500 animate-pulse"
