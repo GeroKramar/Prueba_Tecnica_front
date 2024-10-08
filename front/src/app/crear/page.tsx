@@ -70,7 +70,8 @@ export default function CrearPersonajePage() {
       } else {
         notify("Error al crear el personaje.", "error");
       }
-    } catch (error) {
+    } catch (error:any) {
+      console.log(error)
       notify("Error al conectar con el servidor.", "error");
     }
   };
