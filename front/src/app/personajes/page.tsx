@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Character } from "../interfaces";
 import Link from "next/link";
 import Swal from "sweetalert2";
-import Image from 'next/image';
 
 export default function PersonajesPage() {
   const [characters, setCharacters] = useState<Character[]>([]);
@@ -16,7 +15,7 @@ export default function PersonajesPage() {
   
   useEffect(() => {
     const fetchCharacters = async () => {
-      const res = await fetch(`http://pruebatecnica11-7-24-production.up.railway.app/characters?page=${page}&limit=10`);
+      const res = await fetch(`${apiUrl}/characters?page=${page}&limit=10`);
       const data = await res.json();
       setCharacters(data.characters);
       setAllCharacters(data.characters); 
