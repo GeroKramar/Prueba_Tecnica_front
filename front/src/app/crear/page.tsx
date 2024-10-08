@@ -13,6 +13,7 @@ export default function CrearPersonajePage() {
   const [locationName, setLocationName] = useState("");
   const [image, setImage] = useState("");
   const [episodes, setEpisodes] = useState<string[]>([]);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   const notify = (message: string, type: 'success' | 'error') => {
     if (type === 'success') {
@@ -47,7 +48,7 @@ export default function CrearPersonajePage() {
     };
   
     try {
-      const res = await fetch("http://127.0.0.1:3000/characters/create", {
+      const res = await fetch(`${apiUrl}}/characters/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

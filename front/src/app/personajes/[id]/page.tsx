@@ -7,10 +7,10 @@ import { CharacterFull } from "@/app/interfaces";
   
   export default function CharacterDetail({ params }: { params: { id: string } }) {
     const [character, setCharacter] = useState<CharacterFull | null>(null);
-  
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     useEffect(() => {
       const fetchCharacter = async () => {
-        const res = await fetch(`http://127.0.0.1:3000/characters/${params.id}`);
+        const res = await fetch(`${apiUrl}/characters/${params.id}`);
         const data = await res.json();
         setCharacter(data);
       };

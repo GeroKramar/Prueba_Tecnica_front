@@ -2,9 +2,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Character } from "../interfaces";
-
 import Link from "next/link";
-import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 
 export default function PersonajesPage() {
@@ -18,7 +16,7 @@ export default function PersonajesPage() {
   useEffect(() => {
     const fetchCharacters = async () => {
       const res = await fetch(
-        `http://pruebatecnica-production-gero.up.railway.app:8080/characters?page=${page}&limit=10`
+        `${apiUrl}/characters?page=${page}&limit=10`
       );
       const data = await res.json();
       setCharacters(data.characters);
@@ -65,7 +63,7 @@ export default function PersonajesPage() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`http://127.0.0.1:3000/characters/delete/${id}`, {
+          const res = await fetch(`${apiUrl}/characters/delete/${id}`, {
             method: "DELETE",
           });
   
